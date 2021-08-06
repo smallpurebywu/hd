@@ -1,2 +1,2 @@
 <?php
-echo "<h3>This is HD!</h3>";
+echo "<h3>This is HD2!</h3>";
