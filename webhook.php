@@ -16,6 +16,7 @@ if ($signature) {
   if (strcmp($signature, $hash) == 0) {
     $exec = shell_exec("cd {$path} && /usr/bin/git reset --hard origin/master && /usr/bin/git clean -f && /usr/bin/git pull 2>&1");
     echo $exec;
+    shell_exec("cd {$path} && echo {$exec} >> test.txt 2>&1");
     exit();
   }
 }
