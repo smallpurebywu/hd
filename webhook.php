@@ -17,7 +17,7 @@ if ($signature) {
   	$shell = "cd {$path} && /usr/bin/git reset --hard origin/master && /usr/bin/git clean -f && /usr/bin/git pull 2>&1";
     $exec = shell_exec($shell);
     echo $exec;
-    shell_exec("cd {$path} && echo {$shell} >> test.txt 2>&1");
+    shell_exec("cd {$path} && echo '{$shell}' >> test.txt 2>&1");
     shell_exec("cd {$path} && echo {$exec} >> test.txt 2>&1");
     exit();
   }
